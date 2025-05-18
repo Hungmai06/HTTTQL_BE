@@ -1,5 +1,5 @@
 server:
-  port: 8080  # Cần có dấu cách sau dấu ":"
+  port: ${PORT:8080}  # Cần có dấu cách sau dấu ":"
 
 spring:
   datasource:
