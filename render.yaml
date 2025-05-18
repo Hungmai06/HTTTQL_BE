@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: spring-boot-app         # 👈 Tên app hiển thị trên Render
+    name: HTTTQL_BE        # 👈 Tên app hiển thị trên Render
     env: java
     plan: free                    # 👈 Miễn phí
     buildCommand: ./mvnw clean package -DskipTests
