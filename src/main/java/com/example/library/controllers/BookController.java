@@ -36,9 +36,9 @@ public class BookController {
                         .name(book.getName())
                         .description(book.getDescription())
                         .priceBook(book.getPriceBook())
-                        .categoryId(book.getCategory().getId())
-                        .publisherId(book.getPublisher().getId())
-                        .authorId(book.getAuthor().getId())
+                        .categoryId(book.getCategory().getName())
+                        .publisherId(book.getPublisher().getName())
+                        .authorId(book.getAuthor().getName())
                         .status(book.getBookStatusEnum())
                 .build());
     }
@@ -51,9 +51,9 @@ public class BookController {
                             .name(book.getName())
                             .description(book.getDescription())
                             .priceBook(book.getPriceBook())
-                            .categoryId(book.getCategory().getId())
-                            .publisherId(book.getPublisher().getId())
-                            .authorId(book.getAuthor().getId())
+                            .categoryId(book.getCategory().getName())
+                            .publisherId(book.getPublisher().getName())
+                            .authorId(book.getAuthor().getName())
                             .status(book.getBookStatusEnum())
                     .build());
         }
@@ -67,9 +67,9 @@ public class BookController {
                 .name(book.getName())
                 .description(book.getDescription())
                 .priceBook(book.getPriceBook())
-                .categoryId(book.getCategory().getId())
-                .publisherId(book.getPublisher().getId())
-                .authorId(book.getAuthor().getId())
+                .categoryId(book.getCategory().getName())
+                .publisherId(book.getPublisher().getName())
+                .authorId(book.getAuthor().getName())
                 .status(book.getBookStatusEnum())
                 .build());
     }
@@ -81,9 +81,9 @@ public class BookController {
                 .name(book.getName())
                 .description(book.getDescription())
                 .priceBook(book.getPriceBook())
-                .categoryId(book.getCategory().getId())
-                .publisherId(book.getPublisher().getId())
-                .authorId(book.getAuthor().getId())
+                .categoryId(book.getCategory().getName())
+                .publisherId(book.getPublisher().getName())
+                .authorId(book.getAuthor().getName())
                 .build());
     }
     @DeleteMapping("/{id}")

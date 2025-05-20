@@ -14,8 +14,8 @@ public class BookResponse {
     private String name;
     private Float priceBook;
     private String description;
-    private Long categoryId;
-    private Long authorId;
-    private Long publisherId;
+    private String categoryId;
+    private String authorId;
+    private String publisherId;
     private Enum status;
 }

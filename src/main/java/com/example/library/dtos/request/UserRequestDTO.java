@@ -21,6 +21,5 @@ public class UserRequestDTO {
     private String userName;
     private String email;
     private Float deposit;
-    private String password;
     private Long roleId;
 }

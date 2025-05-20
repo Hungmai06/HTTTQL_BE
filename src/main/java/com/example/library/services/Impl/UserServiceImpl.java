@@ -46,7 +46,7 @@ public class UserServiceImpl implements UserService {
                     .email(userRequestDTO.getEmail())
                     .phone(userRequestDTO.getPhone())
                     .username(userRequestDTO.getUserName())
-                    .password(PasswordUtils.encode(userRequestDTO.getPassword()))
+                    .password(null)
                     .deposit(userRequestDTO.getDeposit())
                     .build();
             user.setStatus(UserStatusEnum.ACTIVE);
@@ -67,7 +67,7 @@ public class UserServiceImpl implements UserService {
                 .email(userRequestDTO.getEmail())
                 .phone(userRequestDTO.getPhone())
                 .username(userRequestDTO.getUserName())
-                .password(PasswordUtils.encode(userRequestDTO.getPassword()))
+                .password(null)
                 .deposit(userRequestDTO.getDeposit())
                 .role(role)
                 .status(user.getStatus())
