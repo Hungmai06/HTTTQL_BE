@@ -12,6 +12,7 @@ import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.util.Date;
+import java.util.List;
 
 @Getter
 @Setter
@@ -19,8 +20,8 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class BookLoanRequestDTO {
-    private Long bookId;
+    private List<Long> bookId;
     private Long userId;
-
-    private Date dueDate;
+    private String borrowDate;
+    private String dueDate;
 }

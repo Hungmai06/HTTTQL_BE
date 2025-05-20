@@ -1,5 +1,6 @@
 package com.example.library.controllers;
 
+import com.example.library.constants.BookStatusEnum;
 import com.example.library.dtos.request.BookRequestDTO;
 import com.example.library.dtos.response.BookResponse;
 import com.example.library.exceptions.DataNotFoundException;
@@ -53,6 +54,7 @@ public class BookController {
                             .categoryId(book.getCategory().getId())
                             .publisherId(book.getPublisher().getId())
                             .authorId(book.getAuthor().getId())
+                            .status(book.getBookStatusEnum())
                     .build());
         }
         return  ResponseEntity.ok(list);
@@ -68,6 +70,7 @@ public class BookController {
                 .categoryId(book.getCategory().getId())
                 .publisherId(book.getPublisher().getId())
                 .authorId(book.getAuthor().getId())
+                .status(book.getBookStatusEnum())
                 .build());
     }
     @PutMapping("/{id}")

@@ -11,4 +11,6 @@ import java.util.Optional;
 public interface BookLoanRepository extends JpaRepository<BookLoan,Long> {
     List<BookLoan> findByUserId(Long userId);
     Optional<BookLoan> findByBookId(Long bookId);
+    Optional<BookLoan> findByUserIdAndBookId(Long userId, Long bookId);
+
 }

@@ -39,17 +39,12 @@ public class BookLoan extends DateBase{
     @Enumerated(EnumType.STRING)
     private BookLoanEnum bookLoanEnum;
     @Column
-    @CreationTimestamp
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date borrowDate;
+    private String borrowDate;
+
     @Column
-    @CreationTimestamp
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date dueDate;
+    private String dueDate;
     @Column
-    @CreationTimestamp
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date returnDate;
+    private String returnDate;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
@@ -57,7 +52,5 @@ public class BookLoan extends DateBase{
     @ManyToOne
     @JoinColumn(name = "book_id")
     private Book book;
-    @OneToMany(mappedBy = "bookLoan")
-    private List<Fine> fines;
 
 }

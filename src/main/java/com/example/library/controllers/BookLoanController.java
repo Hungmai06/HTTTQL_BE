@@ -1,6 +1,7 @@
 package com.example.library.controllers;
 
 import com.example.library.dtos.request.BookLoanRequestDTO;
+import com.example.library.dtos.request.ReturnBookLoanRequestDTO;
 import com.example.library.dtos.response.ReturnBookResponse;
 import com.example.library.exceptions.DataNotFoundException;
 import com.example.library.exceptions.InvalidValueException;
@@ -29,8 +30,8 @@ public class BookLoanController {
         System.out.println(bookLoanRequestDTO.getDueDate());
         return ResponseEntity.ok(bookLoanService.createBookLoan(bookLoanRequestDTO));
     }
-    @PutMapping("/{bookLoanId}")
-    public ResponseEntity<ReturnBookResponse> returnBookLoan(@PathVariable Long bookLoanId) throws DataNotFoundException {
-        return ResponseEntity.ok(bookLoanService.returnBook(bookLoanId));
+    @PutMapping("/")
+    public ResponseEntity<?> returnBookLoan(@RequestBody ReturnBookLoanRequestDTO returnBookLoanRequestDTO) throws DataNotFoundException {
+        return ResponseEntity.ok(bookLoanService.returnBook(returnBookLoanRequestDTO));
     }
 }
